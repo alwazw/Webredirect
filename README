@@ -1,13 +1,15 @@
-README.txt
+The index.html will load, collect the fingerprint data, send it to the Flask server, and then redirect to the url you want (here ex: Google.com). 
+The collected data will be logged to fingerprints.log.
+After starting the Flask app, navigate to http://localhost:8080 or (Server-IP:8080) in your browser. 
+Verify fingerprint data was collected in fingerprints.log.
 
-Structure
+1. Clone Repo
+
+-- Structure
 
 /home/alwazw/test_dir
 ├── app.py
-├── app.pyold
 ├── fingerprints.log
-├── flask.log
-├── nohup.out
 ├── requirements.txt
 ├── static
 │   └── js
@@ -15,18 +17,22 @@ Structure
 └── templates
     └── index.html
 
--- Create Folders
+2. Create Folders
 cd
 mkdir webredirect
 mkdir -p "$BASE_DIR/static/js"
 mkdir -p "$BASE_DIR/templates"
 
--- Create the files
+3. Create the files
 touch "$BASE_DIR/app.py"
-touch "$BASE_DIR/app.pyold"
 touch "$BASE_DIR/fingerprints.log"
-touch "$BASE_DIR/flask.log"
-touch "$BASE_DIR/nohup.out"
 touch "$BASE_DIR/requirements.txt"
 touch "$BASE_DIR/static/js/fingerprint.js"
 touch "$BASE_DIR/templates/index.html"
+
+4. Install Dependencies:
+pip install -r requirements.txt
+
+5. Run Flask App:
+python app.py
+
