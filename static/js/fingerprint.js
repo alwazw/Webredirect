@@ -31,7 +31,7 @@ async function getFingerprint() {
 
     console.log(fingerprint);
 
-    // Send the fingerprint data to your server
+    // Send the fingerprint data to server
     try {
         await fetch('/collect', {
             method: 'POST',
@@ -44,7 +44,7 @@ async function getFingerprint() {
         console.error('Error sending fingerprint data:', error);
     }
 
-    // Redirect to the client website
+    // Redirect to the client website ex. google.com
     window.location.href = 'http://google.com';
 }
 
