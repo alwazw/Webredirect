@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python app.py
 
 4. Visit redirect webpage:
-http://localhost:8080
+http://localhost:8080 ---> will be automatically redirected to target site ex. google.com
 
 4. Export 
 browser fingerprint json located fingerprints.log
